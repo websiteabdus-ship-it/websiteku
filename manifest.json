@@ -1,0 +1,22 @@
+{
+  "name": "Website Abdussalam",
+  "short_name": "AbdusApp",
+  "description": "Aplikasi resmi Website Abdussalam",
+  "start_url": "/websiteku/",
+  "scope": "/websiteku/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#e11d48",
+  "icons": [
+    {
+      "src": "/websiteku/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/websiteku/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
