@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- === RAINBOW LIVE TITLE : ABDUSSALAM APP STUDIO === -->
+<style>
+.rainbow-title{
+  margin-top:40px;
+  text-align:center;
+  font-size:clamp(30px,6vw,56px);
+  font-weight:900;
+  letter-spacing:3px;
+  background:linear-gradient(
+    90deg,
+    #ff0000,
+    #ffffff,
+    #22c55e,
+    #3b82f6,
+    #eab308,
+    #ff0000
+  );
+  background-size:600% 600%;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:
+    rainbowMove 5s linear infinite,
+    glowBlink 1.8s infinite;
+}
+
+@keyframes rainbowMove{
+  0%{background-position:0% 50%}
+  100%{background-position:100% 50%}
+}
+
+@keyframes glowBlink{
+  0%,100%{
+    filter:
+      drop-shadow(0 0 6px red)
+      drop-shadow(0 0 12px green)
+      drop-shadow(0 0 18px blue);
+    opacity:1;
+  }
+  50%{
+    filter:
+      drop-shadow(0 0 22px yellow)
+      drop-shadow(0 0 30px cyan)
+      drop-shadow(0 0 38px white);
+    opacity:0.85;
+  }
+}
+</style>
+
+<h1 class="rainbow-title">
+  ABDUSSALAM APP STUDIO
+</h1>
+<!-- === END RAINBOW LIVE TITLE === -->
+
+    <!-- TEXT PROMO -->
+    <div class="promo-text">
+      <h2>🔥 Promo Pembuatan</h2>
+      <p>
+        Android • Web • Backend <br>
+        <span>Flutter • Firebase • Supabase</span>
+      </p>
+      <a href="https://wa.me/6283155620630" class="promo-btn">
+        🚀 Request Sekarang
+      </a>
+    </div>
+
+    <!-- TERMINAL -->
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="title">abdussalam@ubuntu</span>
+      </div>
+      <pre class="terminal-body">
+<span class="cmd">abdussalam@ubuntu:~$</span> flutter create client_app
+<span class="out">✓ Project created</span>
+
+<span class="cmd">abdussalam@ubuntu:~$</span> cd client_app
+<span class="cmd">abdussalam@ubuntu:~/client_app$</span> flutter run
+<span class="out">✓ App running on Android</span>
+
+<span class="cmd">abdussalam@ubuntu:~$</span> firebase deploy
+<span class="out">✓ Backend deployed successfully</span>
+      </pre>
+    </div>
+
+  </div>
+</section>
+
+<style>
+/* PROMO SECTION */
+.promo-terminal{
+  background:linear-gradient(180deg,#020617,#020617cc);
+  padding:80px 20px;
+}
+.promo-wrap{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+
+/* TEXT */
+.promo-text h2{
+  font-size:36px;
+  margin-bottom:15px;
+  color:#22c55e;
+}
+.promo-text p{
+  font-size:18px;
+  color:#cbd5f5;
+  line-height:1.6;
+}
+.promo-text span{
+  color:#38bdf8;
+}
+.promo-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:14px 30px;
+  background:#22c55e;
+  color:#020617;
+  font-weight:600;
+  border-radius:10px;
+}
+
+/* TERMINAL */
+.terminal{
+  background:#020617;
+  border-radius:14px;
+  box-shadow:0 0 40px #22c55e33;
+  overflow:hidden;
+}
+.terminal-header{
+  background:#020617;
+  padding:10px 15px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  border-bottom:1px solid #1e293b;
+}
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:50%;
+}
+.red{background:#ef4444}
+.yellow{background:#facc15}
+.green{background:#22c55e}
+.title{
+  margin-left:10px;
+  color:#94a3b8;
+  font-size:13px;
+}
+
+/* TERMINAL BODY */
+.terminal-body{
+  padding:20px;
+  color:#22c55e;
+  font-size:14px;
+  line-height:1.6;
+  animation:typing 8s steps(40,end) infinite;
+  white-space:pre-wrap;
+}
+.cmd{color:#38bdf8}
+.out{color:#e5e7eb}
+
+@keyframes typing{
+  0%{opacity:0}
+  10%{opacity:1}
+}
+
+/* MOBILE */
+@media(max-width:900px){
+  .promo-wrap{
+    grid-template-columns:1fr;
+  }
+  .promo-text h2{
+    font-size:28px;
+  }
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins}
+body{background:#0b1220;color:#fff}
+a{text-decoration:none;color:inherit}
+
+header{
+position:fixed;top:0;left:0;right:0;
+background:rgba(11,18,32,.95);
+padding:15px 25px;
+z-index:1000
+}
+.logo{font-size:20px;font-weight:700;color:#4ade80}
+
+.hero{
+min-height:100vh;
+padding:140px 20px 80px;
+text-align:center;
+background:linear-gradient(135deg,#020617,#111827)
+}
+.hero h1{font-size:36px}
+.hero span{color:#4ade80}
+.hero p{max-width:720px;margin:20px auto;color:#cbd5e1}
+
+.btn-group{
+margin-top:30px;
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:320px;
+margin:auto
+}
+.btn{padding:14px;border-radius:12px;font-weight:600;text-align:center}
+.btn-request{background:#ef4444}
+.btn-wa{background:#22c55e}
+
+section{padding:90px 20px;max-width:1200px;margin:auto}
+section h2{text-align:center;margin-bottom:50px;font-size:32px}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px
+}
+
+.card{
+background:#111827;
+border-radius:18px;
+border:1px solid #1f2937;
+transition:.3s;
+padding:30px;
+text-align:center
+}
+.card:hover{transform:translateY(-8px);border-color:#4ade80}
+
+.card img{
+height:80px;
+margin-bottom:20px;
+object-fit:contain
+}
+.card p{font-size:14px;color:#94a3b8}
+
+/* FEATURE */
+.feature-card{
+background:linear-gradient(135deg,#020617,#111827);
+border:1px solid #1f2937;
+border-radius:20px;
+padding:30px;
+margin-bottom:30px
+}
+.feature-icon{
+width:55px;height:55px;
+border-radius:14px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:20px;
+background:linear-gradient(135deg,#ef4444,#22c55e)
+}
+.feature-card h3{color:#f87171;margin-bottom:10px}
+
+/* PROJECT */
+.project-card{
+background:#111827;
+border-radius:20px;
+overflow:hidden;
+border:1px solid #1f2937
+}
+.project-card img{
+width:100%;
+height:220px;
+object-fit:cover
+}
+.project-card .content{padding:25px}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+.badge{
+background:#1f2937;
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+color:#f87171
+}
+
+/* TECH STRIP */
+.tech-strip{
+display:flex;
+gap:40px;
+overflow-x:auto;
+padding:30px 10px;
+justify-content:center
+}
+.tech-strip img{
+height:45px;
+filter:grayscale(100%);
+opacity:.8;
+transition:.3s
+}
+.tech-strip img:hover{filter:none;opacity:1}
+
+/* FORM */
+.form-box{
+background:#111827;
+padding:30px;
+border-radius:18px;
+max-width:600px;
+margin:auto;
+border:1px solid #1f2937
+}
+.form-box input,.form-box textarea{
+width:100%;
+padding:14px;
+margin-bottom:15px;
+border-radius:10px;
+border:none;
+background:#020617;
+color:#fff
+}
+.form-box button{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:#ef4444;
+color:#fff;
+font-weight:600
+}
+
+footer{
+background:#020617;
+padding:25px;
+text-align:center;
+color:#64748b
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo"></div>
+</header>
+
+<section class="hero">
+<h1>Jasa Pembuatan Aplikasi<br><span>Android • Web • Backend</span></h1>
+<p>Flutter, FlutterFlow, Firebase, Supabase, MySQL, phpMyAdmin & IT Security</p>
+
+<div class="btn-group">
+<a href="#request" class="btn btn-request">Request Aplikasi</a>
+<a href="https://wa.me/6283155620630" class="btn btn-wa">WhatsApp</a>
+</div>
+</section>
+
+<section>
+<h2>Technology & Services</h2>
+<div class="grid">
+<div class="card"><img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png"><h3>Flutter</h3><p>Cross-platform mobile app</p></div>
+<div class="card"><img src="https://assets-global.website-files.com/640b4f43b43c4a6d7f1c9a8b/640b4f43b43c4a9a7f1c9b03_flutterflow-logo.png"><h3>FlutterFlow</h3><p>Rapid app development</p></div>
+<div class="card"><img src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png"><h3>Firebase</h3><p>Auth & realtime database</p></div>
+<div class="card"><img src="https://supabase.com/brand-assets/supabase-logo-icon.png"><h3>Supabase</h3><p>Open-source backend</p></div>
+<div class="card"><img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png"><h3>MySQL</h3><p>Relational database</p></div>
+<div class="card"><img src="https://www.phpmyadmin.net/static/images/logo.png"><h3>phpMyAdmin</h3><p>Database management</p></div>
+</div>
+</section>
+
+<section>
+<h2>Kepercayaan & Keunggulan</h2>
+<div class="feature-card">
+<div class="feature-icon">🛡️</div>
+<h3>Keamanan & Privasi</h3>
+<p>Enkripsi data, backend aman, dan IT Security berlapis.</p>
+</div>
+<div class="feature-card">
+<div class="feature-icon">💻</div>
+<h3>Keahlian Teknis</h3>
+<p>Flutter, Firebase, Supabase, REST API & sistem scalable.</p>
+</div>
+</section>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js")
+    .then(() => console.log("PWA aktif"))
+    .catch(err => console.log("SW error", err));
+}
+</script>
+<section>
+<h2>Powered by Modern Technology</h2>
+<div class="grid">
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1557821552-17105176677c">
+<div class="content">
+<h3>Modern Frontend</h3>
+<div class="badges"><span class="badge">Flutter</span><span class="badge">React</span></div>
+</div>
+</div>
+<div class="project-card">
+<img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+<div class="content">
+<h3>Backend System</h3>
+<div class="badges"><span class="badge">Supabase</span><span class="badge">MySQL</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- BIG CODING TERMINAL SECTION -->
+<section style="
+padding:80px 20px;
+max-width:1200px;
+margin:auto;
+color:#fff;
+">
+
+  <h2 style="
+  text-align:center;
+  font-size:36px;
+  font-weight:700;
+  margin-bottom:50px;
+  ">
+    Powerful Development Environment
+  </h2>
+
+  <!-- LIST -->
+  <div style="display:flex;flex-direction:column;gap:40px">
+
+    <!-- ITEM 1 -->
+    <div style="
+    background:#020617;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+    ">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+           style="width:100%;height:320px;object-fit:cover">
+      <div style="padding:30px">
+        <h3 style="font-size:24px;margin-bottom:10px">
+          Terminal & Coding
+        </h3>
+        <p style="color:#94a3b8;line-height:1.7;font-size:15px">
+          Linux Terminal, Bash, DevOps, Backend, Security & Server Management
+        </p>
+      </div>
+    </div>
+
+    <!-- ITEM 2 -->
+    <div style="
+    background:#020617;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+    ">
+      <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f"
+           style="width:100%;height:320px;object-fit:cover">
+      <div style="padding:30px">
+        <h3 style="font-size:24px;margin-bottom:10px">
+          Web Development
+        </h3>
+        <p style="color:#94a3b8;line-height:1.7;font-size:15px">
+          HTML, CSS, JavaScript, React, API Integration & Performance Optimization
+        </p>
+      </div>
+    </div>
+
+    <!-- ITEM 3 -->
+    <div style="
+    background:#020617;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 20px 60px rgba(0,0,0,.6);
+    ">
+      <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c"
+           style="width:100%;height:320px;object-fit:cover">
+      <div style="padding:30px">
+        <h3 style="font-size:24px;margin-bottom:10px">
+          Mobile App Engineering
+        </h3>
+        <p style="color:#94a3b8;line-height:1.7;font-size:15px">
+          Flutter, FlutterFlow, Firebase, Supabase & Cross Platform Apps
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+<section id="request">
+<h2>Request Project</h2>
+<div class="form-box">
+<form onsubmit="sendTelegram();return false;">
+<input placeholder="Email" required>
+<input placeholder="WhatsApp" required>
+<input placeholder="Nama Aplikasi" required>
+<textarea placeholder="Deskripsi Project"></textarea>
+<button>Kirim Request</button>
+</form>
+</div>
+</section>
+<!-- FLOATING REQUEST PROJECT -->
+<div class="req-wrap">
+  <div class="wa-float">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+  </div>
+
+  <button class="req-btn" onclick="o()">
+    <img src="https://cdn-icons-png.flaticon.com/512/929/929426.png">
+    Request
+  </button>
+</div>
+
+<div id="pop" class="pop">
+  <div class="box">
+    <span class="close" onclick="c()">×</span>
+    <h3>Request Project</h3>
+
+    <input id="n" placeholder="Nama">
+    <select id="l">
+      <option>Android App</option>
+      <option>Web App</option>
+      <option>Backend / API</option>
+      <option>Firebase / Supabase</option>
+      <option>IT Security</option>
+    </select>
+    <textarea id="d" placeholder="Deskripsi Project"></textarea>
+
+    <a id="wa" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+      Kirim WhatsApp
+    </a>
+
+    <a class="mail" href="mailto:admin@abdussalam.store">✉️ Email</a>
+  </div>
+</div>
+
+<style>
+/* WRAPPER */
+.req-wrap{
+ position:fixed;
+ bottom:22px;
+ right:22px;
+ z-index:9999;
+ display:flex;
+ flex-direction:column;
+ align-items:center;
+ gap:6px;
+}
+
+/* WA FLOAT ICON */
+.wa-float{
+ width:46px;
+ height:46px;
+ border-radius:50%;
+ background:#25D366;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ box-shadow:0 0 25px #25D366aa;
+ animation:waBounce 1.4s infinite, waPulse 2s infinite;
+}
+.wa-float img{
+ width:26px;
+}
+
+@keyframes waBounce{
+ 0%,100%{transform:translateY(0)}
+ 50%{transform:translateY(-8px)}
+}
+@keyframes waPulse{
+ 0%{box-shadow:0 0 15px #25D366}
+ 50%{box-shadow:0 0 35px #25D366}
+ 100%{box-shadow:0 0 15px #25D366}
+}
+
+/* REQUEST BUTTON (SMALLER) */
+.req-btn{
+ display:flex;
+ align-items:center;
+ gap:8px;
+ padding:10px 18px;
+ border-radius:40px;
+ border:0;
+ font-weight:700;
+ font-size:14px;
+ color:#fff;
+ background:linear-gradient(135deg,#ff0000,#7f0000);
+ box-shadow:0 0 18px #ff0000aa;
+ cursor:pointer;
+ animation:pulse 2s infinite;
+}
+.req-btn img{
+ width:18px;
+}
+
+@keyframes pulse{
+ 0%{transform:scale(1)}
+ 50%{transform:scale(1.08)}
+ 100%{transform:scale(1)}
+}
+
+/* POPUP */
+.pop{
+ display:none;
+ position:fixed;
+ inset:0;
+ background:#000c;
+ z-index:9998;
+}
+
+/* BOX */
+.box{
+ background:linear-gradient(180deg,#050505,#0b0b0b);
+ color:#fff;
+ width:90%;
+ max-width:380px;
+ margin:15% auto;
+ padding:22px;
+ border-radius:18px;
+ border:1px solid #ff000044;
+ box-shadow:0 0 40px #ff000088;
+ animation:zoom .4s ease;
+}
+
+@keyframes zoom{
+ from{transform:scale(.6);opacity:0}
+ to{transform:scale(1);opacity:1}
+}
+
+.box h3{
+ text-align:center;
+ margin-bottom:10px;
+ color:#ff3b3b;
+}
+
+.box input,.box select,.box textarea{
+ width:100%;
+ margin:8px 0;
+ padding:10px;
+ border-radius:10px;
+ border:0;
+ background:#111;
+ color:#fff;
+}
+
+.box a{
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ gap:10px;
+ margin-top:10px;
+ padding:12px;
+ border-radius:12px;
+ font-weight:700;
+ color:#fff;
+ background:linear-gradient(135deg,#25D366,#128C7E);
+ box-shadow:0 0 15px #25D366aa;
+}
+.box a img{
+ width:22px;
+}
+
+.box .mail{
+ background:#111;
+ border:1px solid #ff000066;
+}
+
+.close{
+ float:right;
+ cursor:pointer;
+ font-size:22px;
+ color:#ff3b3b;
+}
+</style>
+
+<script>
+function o(){ pop.style.display='block' }
+function c(){ pop.style.display='none' }
+
+wa.onclick=()=>{
+ let t=`Nama: ${n.value}%0ALayanan: ${l.value}%0ADeskripsi: ${d.value}`;
+ wa.href=`https://wa.me/6283155620630?text=${t}`;
+}
+</script>
+<section>
+<h2>Technology Stack</h2>
+<div class="tech-strip">
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Google-flutter-logo.png">
+<img src="https://firebase.google.com/downloads/brand-guidelines/PNG/logo-vertical.png">
+<img src="https://supabase.com/brand-assets/supabase-logo-icon.png">
+<img src="https://www.mysql.com/common/logos/logo-mysql-170x115.png">
+</div>
+</section>
+
+<footer>
+© 2026 Abdussalam App Studio · Indonesia
+</footer>
+
+<script>
+function sendTelegram(){
+window.open("https://t.me/riski_login_bot?start=login","_blank");
+}
+</script>
+<section>
+  <h2>Detail Layanan & Workflow Pengembangan</h2>
+
+  <div class="feature-card">
+    <h3>📱 Pengembangan Aplikasi Android</h3>
+    <ul style="margin-left:20px;line-height:1.9;color:#cbd5e1">
+      <li>Menggunakan Android Studio & Flutter untuk performa maksimal</li>
+      <li>Struktur kode rapi, mudah dikembangkan & maintenance</li>
+      <li>Support Firebase, Supabase, REST API, dan MySQL</li>
+      <li>Siap upload ke Google Play Store</li>
+      <li>Keamanan aplikasi diperhatikan dari sisi backend & frontend</li>
+    </ul>
+    <p style="margin-top:15px;color:#94a3b8">
+      Aplikasi dibangun dengan standar industri, cocok untuk UMKM, startup,
+      hingga sistem internal perusahaan. Fokus pada stabilitas, kecepatan,
+      dan keamanan data pengguna.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>⚙️ Proses Kerja (Workflow)</h3>
+    <ul style="margin-left:20px;line-height:1.9;color:#cbd5e1">
+      <li>Diskusi kebutuhan & konsep aplikasi</li>
+      <li>Perancangan UI/UX sederhana & fungsional</li>
+      <li>Development frontend & backend</li>
+      <li>Testing & perbaikan bug</li>
+      <li>Serah terima source code & panduan penggunaan</li>
+    </ul>
+    <p style="margin-top:15px;color:#94a3b8">
+      Setiap tahap dikerjakan dengan komunikasi yang jelas agar hasil sesuai
+      kebutuhan klien dan tidak membuang waktu.
+    </p>
+  </div>
+
+  <div class="feature-card">
+    <h3>🖥️ Android Studio (Lingkungan Pengembangan)</h3>
+    <img 
+      src="https://developer.android.com/static/studio/images/studio-hero.png"
+      alt="Android Studio"
+      style="width:100%;border-radius:16px;border:1px solid #1f2937;margin:20px 0"
+    >
+    <p style="color:#cbd5e1;line-height:1.8">
+      Android Studio digunakan sebagai IDE utama untuk pengembangan aplikasi.
+      Mendukung debugging, emulator, dan build APK/AAB secara profesional.
+      Cocok untuk aplikasi skala kecil hingga besar dengan performa optimal.
+    </p>
+  </div>
+<section class="tech-section">
+  <h2>Keahlian Teknologi Kami</h2>
+  <p class="subtitle">
+    Menguasai stack teknologi modern untuk hasil optimal
+  </p>
+
+  <div class="tech-grid">
+
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg">
+      <h3>Flutter</h3>
+      <span>Cross-platform mobile</span>
+    </div>
+
+    <div class="tech-card">
+      <img src="https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg">
+      <h3>Firebase</h3>
+      <span>Auth & realtime database</span>
+    </div>
+
+    <div class="tech-card">
+      <img src="https://www.vectorlogo.zone/logos/supabase/supabase-icon.svg">
+      <h3>Supabase</h3>
+      <span>Open source backend</span>
+    </div>
+
+    <div class="tech-card">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg">
+      <h3>MySQL</h3>
+      <span>Relational database</span>
+    </div>
+
+    <div class="tech-card">
+      <img src="https://www.vectorlogo.zone/logos/phpmyadmin/phpmyadmin-icon.svg">
+      <h3>phpMyAdmin</h3>
+      <span>Database management</span>
+    </div>
+
+  </div>
+</section>
+
+<style>
+.tech-section{
+  padding:80px 20px;
+  background:radial-gradient(circle at top,#1e1b4b,#020617);
+  text-align:center;
+  color:#e5e7eb;
+}
+
+.tech-section h2{
+  font-size:36px;
+  margin-bottom:12px;
+}
+
+.subtitle{
+  color:#94a3b8;
+  max-width:600px;
+  margin:0 auto 50px;
+}
+
+.tech-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:25px;
+  max-width:1000px;
+  margin:auto;
+}
+
+.tech-card{
+  background:linear-gradient(180deg,#0f172a,#020617);
+  border-radius:20px;
+  padding:30px 20px;
+  border:1px solid rgba(239,68,68,.35);
+  box-shadow:0 0 25px rgba(239,68,68,.15);
+  transition:.35s ease;
+}
+
+.tech-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 40px rgba(239,68,68,.35);
+}
+
+.tech-card img{
+  width:48px;
+  height:48px;
+  margin-bottom:18px;
+}
+
+.tech-card h3{
+  margin:0;
+  font-size:18px;
+}
+
+.tech-card span{
+  font-size:13px;
+  color:#94a3b8;
+}
+</style>
+<!-- FONT AWESOME (WAJIB ADA) -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+<!-- EXTRA FOOTER DETAIL -->
+<section style="background:#020617;padding:70px 20px;color:#e5e7eb">
+  <div style="max-width:1200px;margin:auto">
+
+    <!-- BRAND -->
+    <div style="display:flex;align-items:center;gap:12px;margi
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#e11d48">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
